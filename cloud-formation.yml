@@ -1,0 +1,42 @@
+Parameters:
+  KeyName:
+    Description: Name of the existing keypair to ssh into ec2 instance.
+    Type: AWS::EC2::KeyPair::KeyName
+
+  VpcId:
+    Description: Terraform VPC
+    Type: AWS::EC2::VPC::Id
+  PublicSubnetId:
+    Type: AWS::EC2::Subnet::Id
+    Description: Enter Public subnet id
+
+
+Resources:
+  HelloBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: PublicRead
+
+  Ec2Instance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      SecurityGroupIds:
+        - Fn::GetAtt: [InstanceSecurityGroup,GroupId ]
+      KeyName: !Ref KeyName
+      ImageId: ami-02e136e904f3da870
+      SubnetId: !Ref PublicSubnetId
+      InstanceType: 't2.micro'
+
+
+
+  InstanceSecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: Enable SSH access via port 22
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+      VpcId: !Ref VpcId
+
