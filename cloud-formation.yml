@@ -23,7 +23,7 @@ Resources:
       SecurityGroupIds:
         - Fn::GetAtt: [InstanceSecurityGroup,GroupId ]
       KeyName: !Ref KeyName
-      ImageId: ami-02e136e904f3da870
+      ImageId: ami-04ad2567c9e3d7893
       SubnetId: !Ref PublicSubnetId
       InstanceType: 't2.micro'
 
