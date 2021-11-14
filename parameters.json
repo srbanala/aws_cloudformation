@@ -1,0 +1,16 @@
+[
+  {
+    "ParameterKey": "VpcId",
+    "ParameterValue": "vpc-08ae2ef40662a7b41",
+    "UsePreviousValue": true
+  },
+  {
+    "ParameterKey": "PublicSubnetId",
+    "ParameterValue": "subnet-0f1808b4222b8728b",
+    "UsePreviousValue": true
+  },
+  {
+    "ParameterKey": "KeyName",
+    "ParameterValue": "mykp"
+  }
+  ]
