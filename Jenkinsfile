@@ -6,7 +6,7 @@ pipeline {
     stages{
         stage ('build'){
             steps {
-            sh 'aws cloudformation create stack --stack-name polls_stack --template-body file:/tmp/cloud-formation.yml --parameters  file:/tmp/parameters.json '
+            sh 'aws cloudformation create-stack --stack-name polls_stack --template-body file:/tmp/cloud-formation.yml --parameters  file:/tmp/parameters.json '
             }
         }
     }
