@@ -7,7 +7,7 @@ pipeline {
         stage ('build'){
             steps {
             sh 'echo $pwd'
-            sh 'aws cloudformation create-stack --stack-name polls_stack --template-body file://./cloud-formation.yml --parameters  file://./parameters.json ' --region=us-east-1
+            sh 'aws cloudformation create-stack --stack-name polls_stack --template-body file://./cloud-formation.yml --parameters  file://./parameters.json  --region=us-east-1 ''
             }
         }
     }
