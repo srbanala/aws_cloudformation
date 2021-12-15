@@ -1,0 +1,30 @@
+aws cloudformation create stack --stack-name polls_stack --template-body file:/tmp/cloud-formation.yml --parameters     "ParameterKey": "VpcId" "ParameterValue": "vpc-08ae2ef40662a7b41"  ParameterKey="KeyName" ParameterValue="mykp" ParameterKey="PublicSubnetId" ParameterValue="subnet-0f1808b4222b8728b"
+
+
+[
+  {
+    "ParameterKey": "VpcId",
+    "ParameterValue": "vpc-08ae2ef40662a7b41",
+    "UsePreviousValue": true
+  },
+  {
+    "ParameterKey": "PublicSubnetId",
+    "ParameterValue": "subnet-0f1808b4222b8728b",
+    "UsePreviousValue": true
+  },
+  {
+    "ParameterKey": "KeyName",
+    "ParameterValue": "mykp"
+  }
+  ]
+
+
+
+  aws cloudformation create-stack --stack-name polls-stack --template-body file://./tmp/cloud-formation.yml --parameters "ParameterKey"="VpcId" "ParameterValue"="vpc-08ae2ef40662a7b41"  "ParameterKey"="KeyName" "ParameterValue"="mykp" "ParameterKey"="PublicSubnetId" "ParameterValue"="subnet-0f1808b4222b8728b"  --region=us-east-1
+
+
+
+[root@ip-10-0-1-221 tmp]#  aws cloudformation create-stack --stack-name polls-stack --template-body file://./cloud-formation.yml --parameters file://./paramters.json  --region=us-east-1
+{
+    "StackId": "arn:aws:cloudformation:us-east-1:298693496319:stack/polls-stack/a1b58bc0-45a6-11ec-82ec-0a8396ce1a29"
+}

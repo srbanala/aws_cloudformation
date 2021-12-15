@@ -10,7 +10,6 @@ Parameters:
     Type: AWS::EC2::Subnet::Id
     Description: Enter Public subnet id
 
-
 Resources:
   HelloBucket:
     Type: AWS::S3::Bucket
@@ -27,8 +26,6 @@ Resources:
       SubnetId: !Ref PublicSubnetId
       InstanceType: 't2.micro'
 
-
-
   InstanceSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
@@ -39,4 +36,9 @@ Resources:
           ToPort: 22
           CidrIp: 0.0.0.0/0
       VpcId: !Ref VpcId
+
+outputs:
+  EC2InstanceID:
+    Description: EC2 instance ID
+    Vaule: !Ref Ec2Instance
 
