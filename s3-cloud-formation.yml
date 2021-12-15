@@ -2,4 +2,4 @@ Resources:
   HelloBucket:
     Type: AWS::S3::Bucket
     Properties:
-      Accesscontrol: PublicRead
+      AccessControl: PublicRead
