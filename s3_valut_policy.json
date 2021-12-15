@@ -4,6 +4,7 @@
     {
       "Effect": "Allow",
       "Action": ["s3:*",
+                 "ec2:*",
                 "cloudformation:CreateStack" ,
                 "cloudformation:DescribeStack",
                 "cloudformation:DeleteStack",
