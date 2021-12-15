@@ -17,29 +17,4 @@ Resources:
     Properties:
       AccessControl: PublicRead
 
-  Ec2Instance:
-    Type: 'AWS::EC2::Instance'
-    Properties:
-      SecurityGroupIds:
-        - Fn::GetAtt: [InstanceSecurityGroup,GroupId ]
-      KeyName: !Ref KeyName
-      ImageId: 'ami-0ed9277fb7eb570c9'
-      SubnetId: !Ref PublicSubnetId
-      InstanceType: 't2.micro'
-
-  InstanceSecurityGroup:
-    Type: 'AWS::EC2::SecurityGroup'
-    Properties:
-      GroupDescription: Enable SSH access via port 22
-      SecurityGroupIngress:
-        - IpProtocol: tcp
-          FromPort: 22
-          ToPort: 22
-          CidrIp: 0.0.0.0/0
-      VpcId: !Ref VpcId
-
-outputs:
-  EC2InstanceID:
-    Description: EC2 instance ID
-    Vaule: !Ref Ec2Instance
 
