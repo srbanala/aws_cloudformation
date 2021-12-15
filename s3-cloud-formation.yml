@@ -1,4 +1,4 @@
-Resource:
+Resources:
   HelloBucket:
     Type: AWS::s3::Bucket
     Properties:
