@@ -41,7 +41,7 @@ Resources:
 outputs:
   Ec2InstanceID:
     Description: EC2 instance ID
-    Value: !Ref EC2Instance
+    Value: !Ref Ec2Instance
 
 
 
