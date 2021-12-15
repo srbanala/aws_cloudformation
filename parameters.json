@@ -1,16 +1,20 @@
 [
   {
     "ParameterKey": "VpcId",
-    "ParameterValue": "vpc-08ae2ef40662a7b41",
+    "ParameterValue": "vpc-0f9fb59b51022f67d",
     "UsePreviousValue": true
   },
   {
     "ParameterKey": "PublicSubnetId",
-    "ParameterValue": "subnet-0f1808b4222b8728b",
+    "ParameterValue": "subnet-0bb9aa1cb8ab6ff03",
     "UsePreviousValue": true
   },
   {
     "ParameterKey": "KeyName",
     "ParameterValue": "mykp"
+  },
+  {
+    "paramaterKey": "MyFreeImageId",
+    "parameterValue": "ami-0ed9277fb7eb570c9"
   }
   ]
