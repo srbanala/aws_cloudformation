@@ -7,7 +7,7 @@ pipeline {
     stages{
         stage ('build'){
             steps {
-             sh 'chmod 777 s3-cloud-formation.yml'
+            // sh 'chmod 777 s3-cloud-formation.yml' not required. fixed it
             // Configuring to use AWS credentials.
             withAWS(credentials: 's3-creds', region: 'us-east-1')
             {

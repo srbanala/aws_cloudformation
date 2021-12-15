@@ -3,7 +3,13 @@
   "Statement": [
     {
       "Effect": "Allow",
-      "Action": "s3:*",
+      "Action": ["s3:*",
+                "cloudformation:CreateStack" ,
+                "cloudformation:DescribeStack",
+                "cloudformation:DeleteStack",
+                "cloudformation:UpdateStack",
+                "cloudformation:DescribeStackEvents",
+                 "iam:PassRole"],
       "Resource": "*"
     }
   ]
