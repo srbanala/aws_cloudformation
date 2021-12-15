@@ -11,7 +11,7 @@ Parameters:
     Description: Enter Public subnet id
   MyFreeImageId:
     Description: Free AMI image id
-    Type: AWS::EC2::ImageId::Id
+    Type: AWS::EC2::ImageId
 
 
 
