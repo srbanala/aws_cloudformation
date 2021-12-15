@@ -38,7 +38,7 @@ Resources:
           CidrIp: 0.0.0.0/0
       VpcId: !Ref VpcId
 
-outputs:
+Outputs:
   Ec2InstanceID:
     Description: EC2 instance ID
     Value: !Ref Ec2Instance
