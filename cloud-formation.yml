@@ -6,6 +6,7 @@ Parameters:
   VpcId:
     Description: Terraform VPC
     Type: AWS::EC2::VPC::Id
+
   PublicSubnetId:
     Type: AWS::EC2::Subnet::Id
     Description: Enter Public subnet id
@@ -17,7 +18,7 @@ Resources:
       AccessControl: PublicRead
 
   Ec2Instance:
-    Type: 'AWS::EC2::Instance'
+    Type: AWS::EC2::Instance
     Properties:
       SecurityGroupIds:
         - Fn::GetAtt: [InstanceSecurityGroup,GroupId ]
@@ -27,7 +28,7 @@ Resources:
       InstanceType: 't2.micro'
 
   InstanceSecurityGroup:
-    Type: 'AWS::EC2::SecurityGroup'
+    Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Enable SSH access via port 22
       SecurityGroupIngress:
