@@ -39,9 +39,9 @@ Resources:
       VpcId: !Ref VpcId
 
 outputs:
-  InstanceID:
+  Ec2InstanceID:
     Description: EC2 instance ID
-    Vaule: !Ref Ec2Instance
+    Value: !Ref Ec2Instance
 
 
 
