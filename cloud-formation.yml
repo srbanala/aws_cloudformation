@@ -9,6 +9,11 @@ Parameters:
   PublicSubnetId:
     Type: AWS::EC2::Subnet::Id
     Description: Enter Public subnet id
+  MyFreeImageId:
+    Description: Free AMI image id
+    Type: AWS::EC2::ImageId::Id
+
+
 
 Resources:
   HelloBucket:
