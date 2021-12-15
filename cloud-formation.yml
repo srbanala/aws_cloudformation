@@ -17,7 +17,7 @@ Resources:
     Properties:
       AccessControl: PublicRead
 
- Ec2Instance:
+  Ec2Instance:
     Type: 'AWS::EC2::Instance'
     Properties:
       SecurityGroupIds:
